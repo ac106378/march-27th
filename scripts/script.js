@@ -67,3 +67,179 @@ playertwodown.onclick = () => {
     let classname = document.querySelector('div < img[src="images/zombie.png"]:parent').className;
     console.log(classname);
 };
+
+/**
+ * Here is the dynamic styling for the Page
+ */
+
+ const background = 'images/background.png'
+ const zombie = 'images/zombie.png'
+ const robot = 'images/robot.png'
+
+function moveUpZ() {
+    let curZombiePos = document.getElementsByClassName("zombie");
+    let parse = curZombiePos.className.split(" ")
+    let parseRow = parse[1];
+    parseRow = parseRow.split("-", 2);
+    parseRow = parseRow[1];
+    let row = parseInt(parse);
+    row += 1;
+    let newRow = row.toString();
+    newRow = "r-" + newRow;
+    parse[1] = newRow;
+    let newClassName = parse[0] + " " + parse[1] + " " + parse[2];
+
+    curZombiePos.children[0].src = background;
+    curZombiePos.classList.remove("zombie");
+
+    document.getElementsByClassName(newClassName).children[0].src = zombie;
+    document.getElementsByClassName(newClassName).classList.add("zombie");
+}
+
+function moveRightZ(cell) {
+    let curZombiePos = document.getElementsByClassName("zombie");
+    let parse = curZombiePos.className.split(" ")
+    let parseRow = parse[2];
+    parseRow = parseRow.split("-", 2);
+    parseRow = parseRow[1];
+    let row = parseInt(parse);
+    row += 1;
+    let newRow = row.toString();
+    newRow = "r-" + newRow;
+    parse[1] = newRow;
+    let newClassName = parse[0] + " " + parse[1] + " " + parse[2];
+
+    curZombiePos.children[0].src = background;
+    curZombiePos.classList.remove("zombie");
+
+    document.getElementsByClassName(newClassName).children[0].src = zombie;
+    document.getElementsByClassName(newClassName).classList.add("zombie");
+}
+
+function moveDownZ(cell) {
+    let curZombiePos = document.getElementsByClassName("zombie");
+    let parse = curZombiePos.className.split(" ")
+    let parseRow = parse[1];
+    parseRow = parseRow.split("-", 2);
+    parseRow = parseRow[1];
+    let row = parseInt(parse);
+    row -= 1;
+    let newRow = row.toString();
+    newRow = "r-" + newRow;
+    parse[1] = newRow;
+    let newClassName = parse[0] + " " + parse[1] + " " + parse[2];
+
+    curZombiePos.children[0].src = background;
+    curZombiePos.classList.remove("zombie");
+
+    document.getElementsByClassName(newClassName).children[0].src = zombie;
+    document.getElementsByClassName(newClassName).classList.add("zombie");
+}
+
+function moveLeftZ(cell) {
+    let curZombiePos = document.getElementsByClassName("zombie");
+    let parse = curZombiePos.className.split(" ")
+    let parseRow = parse[2];
+    parseRow = parseRow.split("-", 2);
+    parseRow = parseRow[1];
+    let row = parseInt(parse);
+    row -= 1;
+    let newRow = row.toString();
+    newRow = "r-" + newRow;
+    parse[1] = newRow;
+    let newClassName = parse[0] + " " + parse[1] + " " + parse[2];
+
+    curZombiePos.children[0].src = background;
+    curZombiePos.classList.remove("zombie");
+
+    document.getElementsByClassName(newClassName).children[0].src = zombie;
+    document.getElementsByClassName(newClassName).classList.add("zombie");
+}
+
+function moveUpR() {
+   let curZombiePos = document.getElementsByClassName("zombie");
+   let parse = curZombiePos.className.split(" ")
+   let parseRow = parse[1];
+   parseRow = parseRow.split("-", 2);
+   parseRow = parseRow[1];
+   let row = parseInt(parse);
+   row += 1;
+   let newRow = row.toString();
+   newRow = "r-" + newRow;
+   parse[1] = newRow;
+   let newClassName = parse[0] + " " + parse[1] + " " + parse[2];
+
+   curZombiePos.children[0].src = background;
+   curZombiePos.classList.remove("zombie");
+
+   document.getElementsByClassName(newClassName).children[0].src = zombie;
+   document.getElementsByClassName(newClassName).classList.add("zombie");
+}
+
+function moveRightR(cell) {
+   let curZombiePos = document.getElementsByClassName("zombie");
+   let parse = curZombiePos.className.split(" ")
+   let parseRow = parse[2];
+   parseRow = parseRow.split("-", 2);
+   parseRow = parseRow[1];
+   let row = parseInt(parse);
+   row += 1;
+   let newRow = row.toString();
+   newRow = "r-" + newRow;
+   parse[1] = newRow;
+   let newClassName = parse[0] + " " + parse[1] + " " + parse[2];
+
+   curZombiePos.children[0].src = background;
+   curZombiePos.classList.remove("zombie");
+
+   document.getElementsByClassName(newClassName).children[0].src = zombie;
+   document.getElementsByClassName(newClassName).classList.add("zombie");
+}
+
+function moveDownR(cell) {
+   let curZombiePos = document.getElementsByClassName("zombie");
+   let parse = curZombiePos.className.split(" ")
+   let parseRow = parse[1];
+   parseRow = parseRow.split("-", 2);
+   parseRow = parseRow[1];
+   let row = parseInt(parse);
+   row -= 1;
+   let newRow = row.toString();
+   newRow = "r-" + newRow;
+   parse[1] = newRow;
+   let newClassName = parse[0] + " " + parse[1] + " " + parse[2];
+
+   curZombiePos.children[0].src = background;
+   curZombiePos.classList.remove("zombie");
+
+   document.getElementsByClassName(newClassName).children[0].src = zombie;
+   document.getElementsByClassName(newClassName).classList.add("zombie");
+}
+
+function moveLeftR(cell) {
+   let curZombiePos = document.getElementsByClassName("zombie");
+   let parse = curZombiePos.className.split(" ")
+   let parseRow = parse[2];
+   parseRow = parseRow.split("-", 2);
+   parseRow = parseRow[1];
+   let row = parseInt(parse);
+   row -= 1;
+   let newRow = row.toString();
+   newRow = "r-" + newRow;
+   parse[1] = newRow;
+   let newClassName = parse[0] + " " + parse[1] + " " + parse[2];
+
+   curZombiePos.children[0].src = background;
+   curZombiePos.classList.remove("zombie");
+
+   document.getElementsByClassName(newClassName).children[0].src = zombie;
+   document.getElementsByClassName(newClassName).classList.add("zombie");
+}
+
+function offMap(character, direction){
+   
+}
+
+function bumpIntoCharacter(character, direction) {
+
+}

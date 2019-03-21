@@ -1,54 +1,20 @@
-/**
- * Here is the dynamic styling for the Welcome Page
- */
+let playeroneup = document.getElementsByClassName('player-one up-arrow');
+let playeronedown = document.getElementsByClassName('player-one down-arrow');
+let playeroneleft = document.getElementsByClassName('player-one left-arrow');
+let playeroneright = document.getElementsByClassName('player-one right-arrow');
 
+let playertwoup = document.getElementsByClassName('player-two up-arrow');
+let playertwodown = document.getElementsByClassName('player-two down-arrow');
+let playertwoleft = document.getElementsByClassName('player-two left-arrow');
+let playertworight = document.getElementsByClassName('player-two right-arrow');
 
-var xpos = 100;
-var ypos = 100;
+let backgroundtile = 'images/background.png';
+let playerone = 'images/robot.png';
+let playertwo = 'images/zombie.png';
 
-// boundary
-var minx = 0;
-var miny = 0;
-var maxx = 490; // 10 pixels for character's width
-var maxy = 490; // 10 pixels for character's width
+playeroneup.onclick = () => {
+    let currenttile = document.querySelector('img[src="images/robot.png"]');
+    let classname = document.querySelector('div < img[src="images/robot.png"]').className;
+    console.log(classname);
+};
 
-// controller vars
-var upPressed = 0;
-var downPressed = 0;
-var leftPressed = 0;
-var rightPressed = 0;
-
-
-function moveUp(cell) {
-    let character = document.getElementById('character')
-    if(offMap()) return;
-    if(bumpIntoCharacter()) return;
-    
-    document.getElementById('character').style.grid-area = "";
-}
-
-function moveRight(cell) {
-    let character = document.getElementById('character')
-    if(offMap(character, 'right')) return;
-    if(bumpIntoCharacter(character, 'right')) return;
-}
-
-function moveDown(cell) {
-    let character = document.getElementById('character')
-    if(offMap(character)) return;
-    if(bumpIntoCharacter(character)) return;
-}
-
-function moveLeft(cell) {
-    let character = document.getElementById('character')
-    if(offMap(character)) return;
-    if(bumpIntoCharacter(character)) return;
-}
-
-function offMap(character, direction){
-    
-}
-
-function bumpIntoCharacter(character, direction) {
-
-}

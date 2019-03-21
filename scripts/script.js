@@ -1,4 +1,4 @@
-let playeroneup = document.getElementsByClassName('player-one up-arrow');
+let playeroneup = document.querySelector('div.player-one.up-arrow > img');
 let playeronedown = document.getElementsByClassName('player-one down-arrow');
 let playeroneleft = document.getElementsByClassName('player-one left-arrow');
 let playeroneright = document.getElementsByClassName('player-one right-arrow');
@@ -13,8 +13,8 @@ let playerone = 'images/robot.png';
 let playertwo = 'images/zombie.png';
 
 playeroneup.onclick = () => {
-    let currenttile = document.querySelector('img[src="images/robot.png"]');
-    let classname = document.querySelector('div < img[src="images/robot.png"]').className;
+    let currenttile = document.getElementsByClassName('robot');
+    let classname = document.querySelector('div < img[src="images/robot.png"]:parent').className;
     console.log(classname);
 };
 

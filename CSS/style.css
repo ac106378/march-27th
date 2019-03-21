@@ -6,8 +6,8 @@ body {
   overflow: hidden;
 }
 .rc-container {
-  width: 100vmin;
-  height: 100vmin;
+  width: 90vmin;
+  height: 90vmin;
   display: grid;
   grid-template-rows: repeat(8, 1fr);
   grid-template-columns: repeat(8, 1fr);
@@ -19,7 +19,7 @@ body {
 .game-container {
   display: grid;
   grid-template-rows: 100%;
-  grid-template-columns: auto 100vmin auto;
+  grid-template-columns: auto 90vmin auto;
 }
 .controls {
   background: #eee;
@@ -47,6 +47,14 @@ body {
   max-width: 100%;
   max-height: 100%;
 }
-.welcome-message{
+.welcome-message {
   text-align: center;
+  height: 10vmin;
+}
+.welcome-message h1 {
+  margin: 0px;
+  line-height: 10vmin;
+}
+body {
+  font-family: Open Sans Semibold, Helvetica Neue, Helvetica, Arial, sans-serif;
 }

@@ -35,9 +35,11 @@ function moveUpZ() {
       return;
    }
    row -= 1;
+   $(document).ready(function(){
+    $(".zombie").animate({opacity: 0.5}, 2000);
+});
    let newRow = row.toString();
    newRow = "r-" + newRow;
-
    parse[1] = newRow;
    let newClassName = parse[0] + " " + parse[1] + " " + parse[2];
    curZombiePos[0].children[0].src = background;
@@ -59,6 +61,9 @@ function moveRightZ(cell) {
         return;
     }
     row = (row + 1);
+    $(document).ready(function(){
+        $(".zombie").animate({opacity: 0.5}, 2000);
+    });
     console.log(row)
     let newRow = row.toString();
     console.log(newRow)
@@ -87,6 +92,9 @@ function moveDownZ(cell) {
         return;
      }
     row += 1;
+    $(document).ready(function(){
+        $(".zombie").animate({opacity: 0.5}, 2000);
+    });
     console.log(row)
     let newRow = row.toString();
     console.log(newRow)
@@ -115,6 +123,9 @@ function moveLeftZ(cell) {
         return;
     }
     row -=1;
+    $(document).ready(function(){
+        $(".zombie").animate({opacity: 0.5}, 2000);
+    });
     console.log(row)
     let newRow = row.toString();
     console.log(newRow)
@@ -143,6 +154,9 @@ function moveUpR() {
        return;
     }
     row -= 1;
+    $(document).ready(function(){
+        $(".robot").animate({opacity: 1}, 2000);
+    });
     console.log(row)
     let newRow = row.toString();
     console.log(newRow)
@@ -171,6 +185,9 @@ function moveRightR(cell) {
         return;
     }
     row = (row + 1);
+    $(document).ready(function(){
+        $(".robot").animate({opacity: 1}, 2000);
+    });
     console.log(row)
     let newRow = row.toString();
     console.log(newRow)
@@ -199,6 +216,9 @@ function moveDownR(cell) {
         return;
      }
     row += 1;
+    $(document).ready(function(){
+        $(".robot").animate({opacity: 1}, 2000);
+    });
     console.log(row)
     let newRow = row.toString();
     console.log(newRow)
@@ -227,6 +247,9 @@ function moveLeftR(cell) {
         return;
     }
     row -=1;
+    $(document).ready(function(){
+        $(".robot").animate({opacity: 1}, 2000);
+    });
     console.log(row)
     let newRow = row.toString();
     console.log(newRow)

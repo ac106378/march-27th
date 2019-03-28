@@ -6,13 +6,13 @@ const zombie = 'images/zombie.png';
 const robot = 'images/robot.png';
 window.onkeyup = checkKey;
 function checkKey (key) {
-    if(key.code == 'ArrowUp')
+    if(key.code == 'KeyI')
         moveUpZ();
-    else if(key.code == 'ArrowDown') 
+    else if(key.code == 'KeyK') 
         moveDownZ();
-    else if(key.code == 'ArrowLeft') 
+    else if(key.code == 'KeyJ') 
         moveLeftZ();
-    else if(key.code == 'ArrowRight') 
+    else if(key.code == 'KeyL') 
         moveRightZ();
     else if(key.code == 'KeyW') 
         moveUpR();

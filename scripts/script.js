@@ -20,6 +20,34 @@ let playertworow = 1;
 let playertwocol = 1;
 
 
+document.addEventListener('keypress', function(event){
+    const keyName = event.key;
+    if (keyName == 'w'){
+        moveUpR();
+    }
+    if (keyName == 'a'){
+        moveLeftR();
+    }
+    if (keyName == 's'){
+        moveDownR();
+    }
+    if (keyName == 'd'){
+        moveRightR();
+    }
+    if (keyName == 'i'){
+        moveUpZ();
+    }
+    if (keyName == 'j'){
+        moveLeftZ();
+    }
+    if (keyName == 'k'){
+        moveDownZ();
+    }
+    if (keyName == 'l'){
+        moveRightZ();
+    }
+} );
+
 playeroneup.onclick = () => {
     let currenttile = document.getElementsByClassName('robot');
     let classname = document.querySelector('div < img[src="images/robot.png"]:parent').className;
